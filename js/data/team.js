@@ -7,22 +7,22 @@ export const secretariat = [
   {
     name: "Aaditya Patil | Vrudhi Varma",
     position: "Deputy Secretary General",
-    image: "/Images/DSG.jpg"
+    image: "/Images/DSG.png"
   },
   {
     name: "Owais Bubere",
     position: "Director General",
-    image: "/Images/DG.jpg"
+    image: "/Images/DG.png"
   },
   {
     name: "Aastha Tiwari | Nitya Chourasia",
     position: "Deputy Director General",
-    image: "/Images/DDG.jpg"
+    image: "/Images/DDG.png"
   },
   {
     name: "Nishtha Desai",
     position: "Chief Relations Officer",
-    image: "/Images/CRO.jpg"
+    image: "/Images/CRO.png"
   },
   {
     name: "Meet Maheshwari",
@@ -32,7 +32,7 @@ export const secretariat = [
   {
     name: "Rasanath Kulkarni | Avneesh Taneja | Rushikesh Patil",
     position: "Planning & Strategy",
-    image: "/Images/PS.jpg"
+    image: "/Images/PS.png"
   }
 ];
 
@@ -40,41 +40,41 @@ export const directorate = [
   {
     name: "Divyanshu Patil",
     position: "Technical",
-    image: "/Images/Tech.jpg"
+    image: "/Images/Tech.png"
   },
   {
     name: "Dhananjay Khairnar",
     position: "SMM",
-    image: "/Images/SMM.jpg"
+    image: "/Images/SMM.png"
   },
   {
     name: "Malay Padshah",
     position: "Media",
-    image: "/Images/Media.jpg"
+    image: "/Images/Media.png"
   },
   {
     name: "Navya Singh | Sanskriti Kuwar",
     position: "Documentation",
-    image: "/Images/Docu.jpg"
+    image: "/Images/Docu.png"
   },
   {
     name: "Arshad Khursheed | Allan Jose",
     position: "Logistics",
-    image: "/Images/Logi.jpg"
+    image: "/Images/Logi.png"
   },
   {
     name: "Dhruv Singh | Khushi Rathi | Niti Sharma",
     position: "DSNH",
-    image: "/Images/DSNH.jpg"
+    image: "/Images/DSNH.png"
   },
   {
     name: "Durwa upadhyay | Ronak Vishanwani | Purvesh Patil",
     position: "Marketing",
-    image: "/Images/Marketing.jpg"
+    image: "/Images/Marketing.png"
   },
   {
     name: "Rushabh Shah",
     position: "Corporate Outreach",
-    image: "/Images/CO.jpg"
+    image: "/Images/CO.png"
   }
 ];
