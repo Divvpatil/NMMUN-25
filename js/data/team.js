@@ -27,7 +27,7 @@ export const secretariat = [
   {
     name: "Meet Maheshwari",
     position: "Charge D' Affaires",
-    image: "/Images/CDA.jpg"
+    image: "/Images/CDA.png"
   },
   {
     name: "Rasanath Kulkarni | Avneesh Taneja | Rushikesh Patil",
