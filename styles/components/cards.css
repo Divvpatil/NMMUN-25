@@ -1,0 +1,49 @@
+.committee-card {
+    background: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.committee-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent), var(--highlight));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.committee-card:hover::before {
+    opacity: 0.1;
+}
+
+.committee-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.team-card {
+    background: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--highlight);
+    margin-bottom: 1rem;
+}
+
+.team-card:hover img {
+    animation: glowPulse 2s infinite;
+}

@@ -1,0 +1,13 @@
+:root {
+    --primary: #190019;
+    --secondary: #2b124c;
+    --accent: #522b5b;
+    --highlight: #854f6c;
+    --light: #dfb6b2;
+    --lighter: #fbe4d8;
+    
+    /* Additional shades */
+    --primary-transparent: rgba(25, 0, 25, 0.9);
+    --text-light: var(--lighter);
+    --text-dark: var(--primary);
+}

@@ -1,0 +1,166 @@
+@import 'variables.css';
+@import 'animations.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'pages/announcements.css';
+@import 'pages/committees.css';
+@import 'pages/sponsors.css';
+@import 'pages/gallery.css';
+
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--primary);
+    color: var(--lighter);
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(25, 0, 25, 0.7), rgba(43, 18, 76, 0.8)), 
+                url('https://source.unsplash.com/random/1920x1080/?conference') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px; /* Account for fixed header */
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: var(--primary-transparent);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--lighter);
+}
+
+.nav-links {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 1.5rem; /* Adjust gap as needed */
+}
+
+.nav-links a {
+    color: var(--lighter);
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--highlight);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 1rem 0; /* Add padding for better spacing */
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem; /* Add padding for touch targets */
+        text-align: center; /* Center text */
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background: var(--primary); /* Use a primary color for the footer background */
+    color: var(--lighter); /* Light text color for contrast */
+    padding: 4rem 2rem; /* Adequate padding for spacing */
+    text-align: center; /* Center align text for a balanced look */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 2rem; /* Space between content and bottom */
+}
+
+.footer-section {
+    flex: 1; /* Allow sections to grow equally */
+    min-width: 200px; /* Minimum width for responsiveness */
+    margin: 1rem; /* Margin for spacing */
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem; /* Space below headings */
+    font-size: 1.5rem; /* Larger font size for headings */
+    color: var(--highlight); /* Highlight color for headings */
+}
+
+.footer-section p {
+    margin: 0.5rem 0; /* Space between paragraphs */
+}
+
+.social-links {
+    display: flex; /* Flexbox for social links */
+    justify-content: center; /* Center align social links */
+    gap: 1rem; /* Space between links */
+}
+
+.social-links a {
+    color: var(--lighter); /* Light color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-links a:hover {
+    color: var(--highlight); /* Change color on hover */
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--lighter); /* Divider line */
+    padding-top: 1rem; /* Space above text */
+    font-size: 0.9rem; /* Smaller font size for copyright */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align items */
+    }
+}

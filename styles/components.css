@@ -1,0 +1,95 @@
+/* Navigation */
+.main-nav {
+    background-color: var(--primary-transparent);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    color: var(--lighter);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--highlight);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Cards */
+.card {
+    background: var(--primary);
+    border-radius: 12px;
+    padding: 2rem;
+    color: var(--lighter);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--lighter);
+}
+
+.btn-primary:hover {
+    background: var(--highlight);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* styles/components/countdown.css */
+.countdown-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.countdown-item {
+    background: var(--secondary);
+    padding: 2rem; /* Increased padding for larger size */
+    border-radius: 10px;
+    text-align: center;
+    min-width: 120px; /* Increased minimum width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for effects */
+}
+
+.countdown-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.countdown-item span {
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
+    color: var(--lighter);
+    display: block;
+}

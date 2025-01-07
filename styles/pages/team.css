@@ -1,0 +1,180 @@
+/* Team Specific Styles */
+.team-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.team-section {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    text-align: center;
+}
+
+/* Section Title Styling */
+.section-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideDown 1s ease-out;
+}
+
+/* Role Title (e.g., "Director General") */
+.role-title {
+    width: 100%;
+    text-align: center;
+    margin: 2.5rem 0;
+    font-size: 2.2rem;
+    color: var(--primary);
+}
+
+/* Vertical Layout */
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem; /* Increased gap for larger images */
+    width: 100%;
+}
+
+/* Bubble Style */
+.team-bubble {
+    width: 100%;
+    max-width: 400px; /* Increased max-width for larger images */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 20px; /* Slightly larger border radius */
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-bubble:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Photo Styling */
+.team-image {
+    width: 300px; /* Significantly increased image size */
+    height: 300px; /* Significantly increased image size */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid var(--highlight); /* Slightly thicker border */
+    margin: 0 auto 2rem auto; /* Increased bottom margin */
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-bubble:hover .team-image {
+    transform: scale(1.05);
+}
+
+/* Name and Position Styling */
+.details {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details h3 {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    font-size: 1.8rem; /* Increased font size */
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+}
+
+.details .position {
+    width: 100%;
+    font-size: 1.3rem; /* Increased font size */
+    color: var(--light);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Names with Separator */
+.team-names {
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--light);
+    font-size: 1.6rem; /* Increased font size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-bubble {
+        max-width: 340px; /* Adjusted for mobile but still larger than before */
+        padding: 1.5rem;
+    }
+    
+    .team-image {
+        width: 250px; /* Larger than before but adjusted for mobile */
+        height: 250px;
+    }
+    
+    .details h3 {
+        font-size: 1.6rem;
+    }
+    
+    .details .position {
+        font-size: 1.2rem;
+    }
+    
+    .team-names {
+        font-size: 1.4rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,288 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(25, 0, 25, 0.7), rgba(43, 18, 76, 0.8)),
+    url('https://source.unsplash.com/random/1920x1080/?conference') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  /* Account for fixed header */
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Main Navigation */
+.main-nav {
+  background-color: var(--primary-transparent);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--lighter);
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow items to wrap */
+  gap: 1.5rem;
+  /* Adjust gap as needed */
+}
+
+.nav-links a {
+  color: var(--lighter);
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--highlight);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Countdown Timer Styles */
+.countdown-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.countdown-item {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.countdown-item:hover {
+  transform: scale(1.05);
+}
+
+.countdown-item span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--lighter);
+  display: block;
+}
+
+/* Button Hover Effects */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* About Section Styles */
+.about-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.about-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--highlight);
+}
+
+/* About Section Content */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-content.reversed {
+  flex-direction: row-reverse;
+}
+
+/* About Section Text */
+.about-text {
+  width: 50%;
+  position: relative;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--highlight);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--highlight);
+  transition: width 0.3s ease;
+}
+
+.about-text:hover h2::after {
+  width: 100px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--lighter);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid var(--secondary);
+}
+
+/* About Section Image */
+.about-image {
+  width: 45%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+/* General Container for About Section */
+.container {
+  padding: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .about-content {
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-content.reversed {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    padding-left: 0.75rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 0;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+}

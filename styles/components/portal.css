@@ -1,0 +1,20 @@
+.dashboard {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--secondary);
+    border-radius: 15px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.committee-info, .resources {
+    background: var(--accent);
+    padding: 1.5rem;
+    border-radius: 10px;
+}

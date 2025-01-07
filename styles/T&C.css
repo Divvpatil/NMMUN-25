@@ -1,0 +1,116 @@
+/* Terms & Conditions Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(25, 0, 25, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgb(43, 18, 76);
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    color: #FAE3D9;
+}
+
+.modal-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(250, 227, 217, 0.2);
+}
+
+.modal-header h2 {
+    color: #FAE3D9;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.terms-section {
+    margin-bottom: 2rem;
+}
+
+.terms-section h3 {
+    color: #FAE3D9;
+    margin-bottom: 1rem;
+}
+
+.terms-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.terms-list li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.sub-list {
+    list-style-type: lower-alpha;
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.modal-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(250, 227, 217, 0.2);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn-accept,
+.btn-decline {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-accept {
+    background-color: #FAE3D9;
+    color: rgb(43, 18, 76);
+}
+
+.btn-decline {
+    background-color: transparent;
+    border: 2px solid #FAE3D9;
+    color: #FAE3D9;
+}
+
+.btn-accept:hover,
+.btn-decline:hover {
+    transform: translateY(-2px);
+}
+
+/* Scrollbar Styles */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(250, 227, 217, 0.1);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(250, 227, 217, 0.3);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(250, 227, 217, 0.4);
+}
