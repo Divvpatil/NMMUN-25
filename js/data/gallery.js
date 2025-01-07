@@ -1,38 +1,32 @@
 export const galleryData = [
   {
-    title: "Opening Ceremony 2024",
-    description: "Inauguration of NMMUN 2024",
-    image: "images/gallery/opening.jpg",
-    category: "Events"
+    title: "Year 2024",
+    image: "Images/CDA.jpg",
+    link: "https://svkmmumbai-my.sharepoint.com/:f:/g/personal/swaraj_borkar43_svkmmumbai_onmicrosoft_com/EopOpEhkchFKm5x1A9svT1sBi2n5QI_QkAdSOmJWE8VtaA?e=OA2bA1"
   },
   {
-    title: "Committee Sessions",
-    description: "UNSC in action",
+    title: "Year 2023",
     image: "images/gallery/committee.jpg",
-    category: "Committees"
+    link:""
   },
   {
-    title: "Delegate Interactions",
-    description: "Networking session",
+    title: "Year 2022",
     image: "images/gallery/networking.jpg",
-    category: "Social"
+    link: ""
   },
   {
-    title: "Award Ceremony",
-    description: "Recognizing excellence",
+    title: "Year 2021",
     image: "images/gallery/awards.jpg",
-    category: "Events"
+    link:""
   },
   {
-    title: "Cultural Evening",
-    description: "Celebrating diversity",
+    title: "Year 2020",
     image: "images/gallery/cultural.jpg",
-    category: "Social"
+    link: ""
   },
   {
-    title: "Panel Discussion",
-    description: "Expert insights",
+    title: "Year 2019",
     image: "images/gallery/panel.jpg",
-    category: "Events"
+    link: ""
   }
 ];

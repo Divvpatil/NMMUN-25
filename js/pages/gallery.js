@@ -10,12 +10,14 @@ export const initGallery = () => {
     
     card.innerHTML = `
       <div class="gallery-image">
+      <a href="${item.link}">
         <img src="${item.image}" alt="${item.title}">
         <div class="gallery-overlay">
-          <span class="category">${item.category}</span>
+        
           <h3>${item.title}</h3>
-          <p>${item.description}</p>
+        
         </div>
+      </a>
       </div>
     `;
     
