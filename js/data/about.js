@@ -10,8 +10,8 @@ export const aboutData = {
     image: "images/campus.jpg"
   },
   theme: {
-    title: "Deliberating For Peace",
-    content: "\"Deliberating For Peace\" encapsulates the core ethos of the prestigious Model United Nations conference at Narsee Monjee Institute of Management Studies, Shirpur. This succinct yet powerful tagline embodies the institute's commitment to fostering an environment where thought, dialogue, and action converge towards global peace and harmony. This tagline stands as a beacon, inspiring students, organizers, and participants alike to deliberate, ideate, and actively contribute to the pursuit of a more peaceful world.",
+    title: "Diplomacy without Borders",
+    content: "The tagline \"Diplomacy Without Borders\" encapsulates the spirit of NM Model United Nations (NMMUN). It signifies the breaking down of geographical, cultural, and ideological barriers to foster meaningful dialogue, collaboration, and understanding. This phrase highlights the essence of MUN, where delegates come together from diverse backgrounds to discuss global issues, propose solutions, and practice diplomacy that transcends boundaries. It represents a vision of a unified world driven by cooperation, critical thinking, and respect for diverse perspectives, reflecting the core values of NMMUN.",
     image: "images/peace.jpg"
   }
 };
