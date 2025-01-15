@@ -6,6 +6,7 @@
     <title>Announcements - NMMUN'25</title>
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/announcements.css">
     <script type="module" src="js/main.js"></script>
 </head>
 <body>
@@ -30,31 +31,154 @@
     <main>
         <section class="hero flex-center">
             <div class="hero-content">
-                <div style="margin-bottom: 2rem;">
-                    <img src="Images/logo.png" alt="NMMUN Logo" style="width: 300px; height: 300px; object-fit: contain;">
+                <div class="logo-container">
+                    <img src="Images/logo.png" alt="NMMUN Logo">
                 </div>
                 <h1 class="gradient-text scale-in">Announcements</h1>
                 <p class="fade-up">Stay Updated with NMMUN'25</p>
             </div>
         </section>
 
-        <section class="announcements-section section">
+        <section class="announcements-section">
             <div class="container">
+                <div class="schedule-grid">
+                    <div class="announcement-card schedule-card">
+                        <h3 class="gradient-text">Day 1 Conference Schedule</h3>
+                        <p class="date">January 16, 2025</p>
+                        <p class="schedule-date">January 18, 2025</p>
+                        <table class="itinerary-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Event</th>
+                                    <th>Venue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>9:00 AM - 9:30 AM</td>
+                                    <td>Registration</td>
+                                    <td>Reception</td>
+                                </tr>
+                                <tr>
+                                    <td>9:00 AM – 10:00 AM</td>
+                                    <td>Breakfast</td>
+                                    <td>Boy's Mess</td>
+                                </tr>
+                                <tr>
+                                    <td>10:00 AM – 10:30 AM</td>
+                                    <td>Opening Ceremony</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>10:30 AM - 12:30 PM</td>
+                                    <td>Committee Session - 1</td>
+                                    <td>LRs + Seminar Hall</td>
+                                </tr>
+                                <tr>
+                                    <td>12:45 PM - 2:00 PM</td>
+                                    <td>Lunch</td>
+                                    <td>Boy's Mess</td>
+                                </tr>
+                                <tr>
+                                    <td>2:15 PM - 4:30 PM</td>
+                                    <td>Committee Session - 2</td>
+                                    <td>LRs + Seminar Hall</td>
+                                </tr>
+                                <tr>
+                                    <td>4:30 PM - 5:00 PM</td>
+                                    <td>High Tea</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>5:15 PM - 7:00 PM</td>
+                                    <td>Committee Session - 3</td>
+                                    <td>LRs + Seminar Hall</td>
+                                </tr>
+                                <tr>
+                                    <td>7:00 PM – 7:45 PM</td>
+                                    <td>Social Gatherings (delegates)</td>
+                                    <td>Student Lounge / Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>7:45 PM onwards</td>
+                                    <td>Dinner</td>
+                                    <td>Boy's Mess</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="announcement-card schedule-card">
+                        <h3 class="gradient-text">Day 2 Conference Schedule</h3>
+                        <p class="date">January 16, 2025</p>
+                        <p class="schedule-date">January 19, 2025</p>
+                        <table class="itinerary-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Event</th>
+                                    <th>Venue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10:00 AM - 12:30 PM</td>
+                                    <td>Committee Session - 4</td>
+                                    <td>LRs + Seminar Hall</td>
+                                </tr>
+                                <tr>
+                                    <td>12:45 PM - 2:00 PM</td>
+                                    <td>Lunch</td>
+                                    <td>Boy's Mess</td>
+                                </tr>
+                                <tr>
+                                    <td>2:15 PM - 4:30 PM</td>
+                                    <td>Committee Session - 5</td>
+                                    <td>LRs + Seminar Hall</td>
+                                </tr>
+                                <tr>
+                                    <td>4:30 PM - 5:00 PM</td>
+                                    <td>High Tea</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>5:15 PM - 7:00 PM</td>
+                                    <td>Closing Ceremony</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>7:00 PM – 7:45 PM</td>
+                                    <td>Social Gatherings (OC members)</td>
+                                    <td>Student Lounge / Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>7:45 PM onwards</td>
+                                    <td>Dinner</td>
+                                    <td>Boy's Mess</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <div class="announcements-grid">
-                    <div class="announcement-card fade-up">
-                        <h3 class="gradient-text">Registration Open</h3>
-                        <p class="date">January 15, 2025</p>
-                        <p>Delegate registrations for NMMUN'25 are now open. Early bird discounts available!</p>
-                    </div>
-                    <div class="announcement-card fade-up">
-                        <h3 class="gradient-text">Committee Allocations</h3>
-                        <p class="date">January 20, 2025</p>
-                        <p>First round of committee allocations will be released soon.</p>
-                    </div>
-                    <div class="announcement-card fade-up">
-                        <h3 class="gradient-text">Workshop Schedule</h3>
-                        <p class="date">January 25, 2025</p>
+                    <div class="announcement-card">
+                        <h3 class="gradient-text">Mock NMMUN'25</h3>
+                        <p class="date">January 12, 2025</p>
                         <p>Pre-conference workshops schedule has been announced.</p>
+                    </div>
+
+                    <div class="announcement-card">
+                        <h3 class="gradient-text">Committee Allocations</h3>
+                        <p class="date">January 08, 2025</p>
+                        <p>First round of committee allocations has been released.</p>
+                    </div>
+
+                    <div class="announcement-card">
+                        <h3 class="gradient-text">Registration Open</h3>
+                        <p class="date">November 27, 2024</p>
+                        <p>Delegate registrations for NMMUN'25 are now open. Early bird discounts available!</p>
                     </div>
                 </div>
             </div>
@@ -66,13 +190,13 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p> Email: <a href="mailto:dsnh.nmmun25@gmail.com">dsnh.nmmun25@gmail.com</a></p>
-                    <p> Phone: <a href="tel:+919977884993">9977884993</a> | <a href="tel:+916283038539">6283038539</a></p>
+                    <p>Email: <a href="mailto:dsnh.nmmun25@gmail.com">dsnh.nmmun25@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+919977884993">9977884993</a> | <a href="tel:+916283038539">6283038539</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/narseemonjeemun?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="animate-float">Instagram</a>
+                        <a href="https://www.instagram.com/narseemonjeemun" class="animate-float">Instagram</a>
                         <a href="https://www.linkedin.com/company/nmmun/" class="animate-float">LinkedIn</a>
                     </div>
                 </div>
