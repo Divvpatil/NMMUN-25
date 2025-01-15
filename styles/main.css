@@ -36,11 +36,19 @@ body {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Main Navigation */
 /* Main Navigation */
 .main-nav {
     background-color: var(--primary-transparent);
     backdrop-filter: blur(10px);
-    padding: 1rem 2rem;
+    padding: 0.75rem 1rem;
     display: flex;
     position: fixed;
     width: 100%;
@@ -48,19 +56,28 @@ body {
     z-index: 1000;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--lighter);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 1.2rem;
 }
 
 .nav-links {
-    width: 40%;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
-    gap: 1.5rem; /* Adjust gap as needed */
+    gap: 1.5rem;
 }
 
 .nav-links a {
@@ -68,6 +85,7 @@ body {
     text-decoration: none;
     position: relative;
     padding: 0.5rem 0;
+    font-size: 0.9rem;
 }
 
 .nav-links a::after {
@@ -86,24 +104,53 @@ body {
     width: 100%;
 }
 
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--lighter);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+    }
+
     .nav-links {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        padding: 1rem 0; /* Add padding for better spacing */
+        display: none;
+        position: fixed;
+        top: 60px; /* Height of header */
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--primary);
+        padding: 1rem 0;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
     }
 
     .nav-links a {
-        padding: 0.5rem 1rem; /* Add padding for touch targets */
-        text-align: center; /* Center text */
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1rem;
     }
-    
-    .hero h1 {
-        font-size: 2.5rem;
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
 }
-
 /* Footer Styles */
 .footer {
     background: var(--primary); /* Use a primary color for the footer background */

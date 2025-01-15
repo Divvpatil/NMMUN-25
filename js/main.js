@@ -44,6 +44,41 @@ window.declineTerms = declineTerms;
 window.showTerms = showTerms;
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navLinks?.classList.contains('show') && 
+            !e.target.closest('.nav-links') && 
+            !e.target.closest('.mobile-menu-btn')) {
+            navLinks.classList.remove('show');
+        }
+    });
+
+    // Set active page
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.nav-links a');
+    
+    links.forEach(link => {
+        // Remove any existing active classes
+        link.classList.remove('active');
+        
+        // Get the path from the href
+        const linkPath = link.getAttribute('href');
+        
+        // Check if the current path matches the link path
+        if (currentPath === linkPath || 
+            (currentPath === '/' && linkPath === '/index.html') ||
+            (currentPath === '/index.html' && linkPath === '/')) {
+            link.classList.add('active');
+        }
+    });
     // Initialize Terms & Conditions first
     initTermsAndConditions();
 
