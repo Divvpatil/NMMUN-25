@@ -44,9 +44,7 @@
   width: 40%;
   display: flex;
   flex-wrap: wrap;
-  /* Allow items to wrap */
   gap: 1.5rem;
-  /* Adjust gap as needed */
 }
 
 .nav-links a {
@@ -75,17 +73,21 @@
 /* Countdown Timer Styles */
 .countdown-container {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem; 
   justify-content: center;
-  margin: 2rem 0;
+  flex-wrap: wrap; 
+  margin: 1.5rem 0; 
+  padding: 0 1rem; 
 }
 
 .countdown-item {
   background: var(--secondary);
-  padding: 1.5rem;
+  padding: 1rem; 
   border-radius: 10px;
   text-align: center;
-  min-width: 100px;
+  min-width: 80px; 
+  flex: 1 1 120px; 
+  max-width: 160px; 
   transition: transform 0.3s ease;
 }
 
@@ -94,7 +96,7 @@
 }
 
 .countdown-item span {
-  font-size: 2rem;
+  font-size: 1.5rem; 
   font-weight: bold;
   color: var(--lighter);
   display: block;
@@ -275,6 +277,20 @@
   .container {
     padding: 2rem 1rem;
   }
+
+  .countdown-container {
+    gap: 1rem; 
+  }
+
+  .countdown-item {
+    padding: 0.8rem; 
+    min-width: 100px; 
+    flex: 1 1 100px; 
+  }
+
+  .countdown-item span {
+    font-size: 1.2rem; 
+  }
 }
 
 @media (max-width: 480px) {
@@ -284,5 +300,20 @@
 
   .about-text h2 {
     font-size: 1.8rem;
+  }
+
+  .countdown-container {
+    gap: 0.5rem; 
+    margin: 1rem 0; 
+  }
+
+  .countdown-item {
+    padding: 0.5rem; 
+    min-width: 80px; 
+    flex: 1 1 80px; 
+  }
+
+  .countdown-item span {
+    font-size: 1rem; 
   }
 }
