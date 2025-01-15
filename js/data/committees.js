@@ -17,11 +17,16 @@ export const committeesData = [
   {
     name: "FIFA/UEFA Committee",
     description: "This committee provides a unique platform to explore the intersection of international sports and governance. Delegates will address key challenges faced by global football organizations such as FIFA and UEFA, including corruption scandals, commercialization, inclusivity, and ethical practices. Discussions will also highlight the role of sports diplomacy in fostering international cooperation and cultural exchange. By diving into issues like gender equality, fair play, and the inclusion of emerging nations in global tournaments, this committee offers a distinctive perspective on the socio-political impact of football.",
-    image: "/Images/fifa.jpeg"
+    image: "/Images/fifa.png"
   },
   {
     name: "UNODC",
     description: "The UNODC is dedicated to tackling transnational challenges such as organized crime, drug trafficking, terrorism, and cybercrime. Delegates will examine critical issues like human trafficking, smuggling, and financial crimes, working towards strategies that promote global cooperation and effective policymaking. This committee emphasizes aligning with the 2030 Sustainable Development Goals, focusing on justice, safety, and the prevention of crimes that transcend national boundaries. Through these discussions, participants will contribute to crafting impactful solutions to some of the world's most pressing threats.",
     image: "/Images/unodc.png"
+  },
+  {
+    name: "DISEC",
+    description: "The Disarmament and International Security Committee (DISEC) at      NMMUN'25 provides a platform to address critical global challenges, including arms control, nuclear disarmament, and the regulation of emerging military technologies like autonomous weapons and cyber warfare.Through collaborative diplomacy and strategic negotiation, delegates will work to develop practical solutions that promote global peace and long-term security. DISEC calls on participants to tackle evolving threats and contribute to shaping a safer, more stable world.",
+    image: "/Images/disec.png"
   }
 ];
