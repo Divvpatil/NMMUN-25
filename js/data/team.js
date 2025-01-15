@@ -2,7 +2,7 @@ export const secretariat = [
   {
     name: "Avinash Tripathy",
     position: "Secretary General",
-    image: "path/to/secretary-general.jpg"
+    image: "/Images/SG.png"
   },
   {
     name: "Aaditya Patil | Vrudhi Varma",
@@ -53,6 +53,11 @@ export const directorate = [
     image: "/Images/Media.png"
   },
   {
+    name: "Rushabh Shah",
+    position: "Corporate Outreach",
+    image: "/Images/CO.png"
+  },
+  {
     name: "Navya Singh | Sanskriti Kuwar",
     position: "Documentation",
     image: "/Images/Docu.png"
@@ -71,10 +76,5 @@ export const directorate = [
     name: "Durwa upadhyay | Ronak Vishanwani | Purvesh Patil",
     position: "Marketing",
     image: "/Images/Marketing.png"
-  },
-  {
-    name: "Rushabh Shah",
-    position: "Corporate Outreach",
-    image: "/Images/CO.png"
   }
 ];
