@@ -1,12 +1,8 @@
 export const sponsorsData = {
   platinum: [
-    { name: "TechCorp Global", logo: "images/sponsors/techcorp.jpg", website: "#" }
+    { name: "Bookzy", logo: "/Images/bookzy.png", website: "https://www.instagram.com/bookzy.in/" }
   ],
   gold: [
-    { name: "Fireknott", logo: "/Images/fireknott.png", website: "#" }
-
-  ],
-  silver: [
-    { name: "Cloud Systems", logo: "images/sponsors/cloud.jpg", website: "#" }
+    { name: "Fireknott", logo: "/Images/fireknott.png", website: "https://www.instagram.com/fireknott/" }
   ]
 };
