@@ -1,38 +1,346 @@
-/* Announcements Specific Styles */
-.announcements-section {
-    padding: 5rem 2rem;
+/* Root variables */
+:root {
+    --primary: #1a0074;
+    --secondary: #2d1650;
+    --light: #e4e4e4;
+    --lighter: #ffffff;
 }
 
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--primary);
+    color: var(--lighter);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(26, 0, 116, 0.8), rgba(45, 22, 80, 0.9));
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    margin-bottom: 2rem;
+}
+
+.logo-container img {
+    width: 120px;
+    height: auto;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(45deg, #ff6b6b, #9b67ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+/* Announcements Section */
+.announcements-section {
+    padding: 3rem 0;
+}
+
+/* Schedule Container */
+.schedule-container {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+/* Schedule Card */
+.schedule-card {
+    background: var(--secondary);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Table Styles */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table th {
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    color: var(--lighter);
+}
+
+.schedule-table td {
+    color: var(--light);
+}
+
+/* Column Widths */
+.time-column {
+    width: 30%;
+}
+
+.event-column {
+    width: 40%;
+}
+
+.venue-column {
+    width: 30%;
+}
+
+/* Announcements Grid */
 .announcements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    width: 100%;
 }
 
+/* Announcement Card */
 .announcement-card {
     background: var(--secondary);
-    padding: 2rem;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    height: 100%;
 }
 
-.announcement-card:hover {
-    transform: translateY(-10px);
-    background: var(--accent);
+.announcement-card:hover,
+.schedule-card:hover {
+    transform: translateY(-2px);
 }
 
-.announcement-card h3 {
-    margin-bottom: 1rem;
+/* Card Content */
+.announcement-card h3,
+.schedule-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
 }
 
-.announcement-card .date {
+.date {
     color: var(--light);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
 }
 
-.announcement-card p {
+.schedule-date {
+    color: var(--light);
+    margin: 0.5rem 0 1rem;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+.scale-in {
+    animation: scaleIn 0.5s ease forwards;
+}
+
+.fade-up {
+    animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Footer Styles */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
     color: var(--lighter);
-    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--lighter);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .schedule-container {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 1fr));
+    }
+    
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .hero {
+        padding: 6rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .announcements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .announcement-card,
+    .schedule-card {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .schedule-table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Navigation Styles */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--lighter);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--secondary);
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Utility Classes */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
